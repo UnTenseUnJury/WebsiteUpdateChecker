@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Website Updates</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            padding: 20px;
+            background-color: #030508;
+            color: #f7fbfc;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #16986f;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;   
+            border: 2px solid #000000;
+
+        }
+
+        th {
+
+            background-color: #145780;
+        }
+
+        tr {
+            background-color: #fff;
+            transition: background-color 0.3s;
+
+        }
+
+        .status-changed {
+            background-color: #16986f;
+        }
+
+        .status-recently-changed {
+            background-color: #911c24;
+            color: #fff;
+        }
+
+        .status-unchanged {
+            background-color: #e6ffe6;
+        }
+
+        .status-error {
+            background-color: #ffb3b3;
+        }
+
+        h1 {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Website Updates Checker</h1><span> - for engineering exams 🥰🥰</span>
+    <br><br><br>    
+    <form method="POST" action="/add_website">
+        <input type="text" name="url" placeholder="Enter website URL" required>
+        <button type="submit">Add Website</button>
+    </form>
+
+    {% if statuses %}
+    <table>
+        <thead>
+            <tr>
+                <th>Website URL</th>
+                <th>Status</th>
+                <th>Last Checked</th>
+                <th>Current Checked</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url, status, last_checked, current_checked, last_updated,
+            updated_recently in statuses %}
+            <tr
+                class="{% if updated_recently and (time.time() - time.mktime(time.strptime(last_updated, '%Y-%m-%d %H:%M:%S'))) < 86400 %}status-recently-changed{% elif 'changed' in status %}status-changed{% elif 'Failed' in status %}status-error{% else %}status-unchanged{% endif %}">
+                <td>{{ url }}</td>
+                <td>{{ status }}</td>
+                <td>{{ last_checked }}</td>
+                <td>{{ current_checked }}</td>
+                <td>{{ last_updated }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No websites are being tracked. Add a website to check its status.</p>
+    {% endif %}
+
+</body>
+
+</html>
