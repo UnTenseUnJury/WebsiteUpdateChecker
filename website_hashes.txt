@@ -1,2 +1,11 @@
+https://admissions.pes.edu/registration/,dc08b539cee40bb5c7f7617a63da6949,2024-10-18 20:45:42,2024-10-18 20:45:42
+https://www.manipal.edu/mu/admission.html,b0dafb57591da3c5d975814cdc64523b,2024-10-18 20:46:22,2024-10-18 20:46:22
+https://jeemain.nta.ac.in/,24b7068cf32fd8125fdbbeda7658bdcb,2024-10-18 20:46:47,2024-10-18 20:46:47
+https://www.srmist.edu.in/admission-india/,0cf4dc3740ebfb99a8fe10a9d24fabe4,2024-10-18 20:46:57,2024-10-18 20:46:57
 https://viteee.vit.ac.in/,41a08c8f1baa6a770e430cc602211cb3,2024-10-18 20:47:06,2024-10-18 20:47:06
-https://vclock.com/,ce86d658a46a01609b3a5202b29deb68,2024-10-18 21:19:14,2024-10-18 21:19:14
+https://www.bitsadmission.com/,08a7b6a2bdb7f295893543b0ae19bcf9,2024-10-18 20:47:14,2024-10-18 20:47:14
+https://cetonline.karnataka.gov.in/kea/,6107191bfd2812b9b487d1210ae9744a,2024-10-18 20:47:23,2024-10-18 20:47:23
+https://www.comedk.org,094e6aee517aa35b4b00d3d0b789f203,2024-10-18 20:47:39,2024-10-18 20:47:39
+https://ugadmissions.iiit.ac.in/,61f1bdd95775f6f47d48611c52c6bd53,2024-10-18 20:47:52,2024-10-18 20:47:52
+https://dbe.iimb.ac.in/,c23311ebcbcfcd69802fc7e6ed9dcc07,2024-10-18 20:48:12,2024-10-18 20:48:12
+https://vclock.com/,1d5abc9f0c468e26ec1f3ad6fe1b1f41,2024-10-18 20:55:24,2024-10-18 20:55:24
